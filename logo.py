@@ -6,14 +6,16 @@
 
 # Import the pygame library and initialise the game engine
 import pygame
+import math
 pygame.init()
 
 # Define some colours
 # Colours are defined using RGB values
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-GREEN = (0, 255, 0)
+GREEN = (29, 185, 84)
 RED = (255, 0, 0)
+BLUE = (62, 68, 182)
 
 # Set the screen size (please don't change this)
 SCREENWIDTH = 400
@@ -40,18 +42,29 @@ while carryOn:
 
     # --- Game logic goes here
     # There should be none for a static image
+    # Clear the screen to white
+    screen.fill(BLACK)
     
     # --- Draw code goes here
+    pygame.draw.ellipse(screen, GREEN, [50, 50, 300,300], 0)
+    pygame.draw.ellipse(screen, BLACK, [102, 135, 25, 25],0)
+    pygame.draw.arc(screen, BLACK, [100,117,200,80],math.radians(0),math.radians(173),25)
+    pygame.draw.ellipse(screen, BLACK, [278,143,25,25],0)
+    pygame.draw.arc(screen,BLACK,[100, 160, 200,80,], math.radians(30), math.radians(153), 20)
+    pygame.draw.ellipse(screen, BLACK, [112,175,20,20],0)
+    pygame.draw.ellipse(screen,BLACK, [268,176,20,20],0)
+    pygame.draw.arc(screen,BLACK,[100,200,200,80], math.radians(43), math.radians(143), 15)
+    #pygame.draw.ellipse(screen,BLACK,[
 
-    # Clear the screen to white
-    screen.fill(WHITE)
+    
 
     # Queue different shapes and lines to be drawn
     # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
-    # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
+    #pygame.draw.line(screen,WHITE, [0, 0], [100, 100], 5)
     # pygame.draw.ellipse(screen, BLACK, [20, 20, 250, 100], 2)
-
-    # Update the screen with queued shapes
+    
+    #pygame.draw.line(screen, WHITE, [42,10], [200,200], 5) 
+        # Update the screen with queued shape.s
     pygame.display.flip()
 
     # --- Limit to 60 frames per second
