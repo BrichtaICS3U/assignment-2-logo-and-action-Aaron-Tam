@@ -54,8 +54,8 @@ while carryOn:
     pygame.draw.ellipse(screen, BLACK, [112,175,20,20],0)
     pygame.draw.ellipse(screen,BLACK, [268,176,20,20],0)
     pygame.draw.arc(screen,BLACK,[100,200,200,80], math.radians(43), math.radians(143), 15)
-    #pygame.draw.ellipse(screen,BLACK,[
-
+    pygame.draw.ellipse(screen,BLACK,[120, 220,16,16],0)
+    pygame.draw.ellipse(screen,BLACK,[260, 218,16,16],0)
     
 
     # Queue different shapes and lines to be drawn
